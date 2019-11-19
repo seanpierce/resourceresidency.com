@@ -118,4 +118,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+# pulls in assets for the Django Admin settings
+STATIC_ROOT = 'static'
+
+# url for referencing assets
+# ex: mysite.com/public/styles.css
+if DEBUG:
+    STATIC_URL = '/assets/'
+else:
+    STATIC_URL = '/static/'
+
+# the location where the static assets live
+# note: when the app refernces the public URL, it will point to the assets folder
+# note2: all files under this directory will be pulled into the static folder
+STATICFILES_DIRS = ( os.path.join('assets'), )

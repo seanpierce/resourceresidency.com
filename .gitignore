@@ -4,3 +4,7 @@ db.sqlite3
 # ignore all pycache
 *.pyc
 __pycache__/
+
+# ignore FE packages and compiled files
+app/node_modules
+assets/dist/
