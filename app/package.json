@@ -1,0 +1,26 @@
+{
+  "name": "resource_residency",
+  "version": "1.0.0",
+  "description": "The front end application for the Resource Residency website",
+  "main": "index.js",
+  "author": "Sean Pierce Sumler",
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "scripts": {
+    "serve": "webpack --mode development",
+    "build": "webpack --mode production"
+  }
+}
