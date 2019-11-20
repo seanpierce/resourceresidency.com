@@ -7,7 +7,7 @@
             <h3>Residencies</h3>
             <ul>
                 <li v-for="residency in artist.residencies" :key="residency.id">
-                    {{ residency.name }}
+                    <a :href="'/residencies/' + residency.id">{{ residency.name }}</a>
                 </li>
             </ul>
         </div>
