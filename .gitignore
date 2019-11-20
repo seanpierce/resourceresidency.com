@@ -8,3 +8,10 @@ __pycache__/
 # ignore FE packages and compiled files
 app/node_modules
 assets/dist/
+
+# ignore virtualenv
+venv/
+
+# os files
+.vscode/
+.DS_Store

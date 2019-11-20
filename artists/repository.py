@@ -7,10 +7,10 @@ class ArtistRepository(object):
 
     @staticmethod
     def get_artists():
-        return list(Artist.objects            
+        return list(Artist.objects
             .filter(active=True)
             .order_by('name')
-            .values('id', 'name', 'info'))
+            .values('id', 'name'))
 
     @staticmethod
     def get_artist(id):
@@ -18,5 +18,7 @@ class ArtistRepository(object):
         return {
             'id': artist.id,
             'name': artist.name,
-            'info': artist.info
+            'info': artist.info,
+            'residencies': list(artist.residency_set.all()
+                .values('id', 'name'))
         }

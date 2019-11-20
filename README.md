@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Versions
 
-* Django 2.1.4
+* Django 2.2.4
 * Python 3.6.3
 
 ## Usage
