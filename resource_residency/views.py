@@ -4,4 +4,7 @@ def index(request):
     """Default view for the application.
     """
 
-    return render(request, 'app.html')
+    return render(request, 'app.html', {
+        'page': 'home',
+        'title': 'Home'
+    })

@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'residencies',
+    'artists',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -117,6 +120,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+INTERNAL_IPS = (
+    'localhost',
+    '0.0.0.0',
+    '127.0.0.1'
+)
 
 # pulls in assets for the Django Admin settings
 STATIC_ROOT = 'static'
