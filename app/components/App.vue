@@ -5,6 +5,7 @@
         <Artist v-if="route === 'artist'" />
         <Residencies v-if="route === 'residencies'" />
         <Residency v-if="route === 'residency'" />
+        <About v-if="route === 'about'" />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import Artists from './pages/Artists.vue';
 import Artist from './pages/Artist.vue';
 import Residencies from './pages/Residencies.vue';
 import Residency from './pages/Residency.vue';
+import About from './pages/About.vue';
 
 export default {
     name: 'App',
@@ -22,7 +24,8 @@ export default {
         Artists,
         Artist,
         Residencies,
-        Residency
+        Residency,
+        About
     },
     computed: {
         route() {

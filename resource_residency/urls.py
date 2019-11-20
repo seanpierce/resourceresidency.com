@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 from .views import index
+from content.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +25,5 @@ urlpatterns = [
     path('artists/', include('artists.urls')),
     path('residencies/', include('residencies.urls')),
     path('projects', index),
-    path('about', index),
+    path('about', about),
 ]

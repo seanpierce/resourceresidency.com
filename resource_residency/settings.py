@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'residencies',
     'artists',
+    'content',
     'ckeditor',
 ]
 
