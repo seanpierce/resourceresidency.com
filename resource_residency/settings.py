@@ -15,6 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,6 +27,8 @@ SECRET_KEY = '2(0m=8lo@^_1w2^7=-hkk4^*_g%%9#47!er1qq%$5x3#^2@y(0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+HOST_NAME = "localhost:8000"
 
 ALLOWED_HOSTS = []
 
@@ -139,6 +143,6 @@ else:
     STATIC_URL = '/static/'
 
 # the location where the static assets live
-# note: when the app refernces the public URL, it will point to the assets folder
+# note: when the app references the public URL, it will point to the assets folder
 # note2: all files under this directory will be pulled into the static folder
 STATICFILES_DIRS = ( os.path.join('assets'), )
