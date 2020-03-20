@@ -1,12 +1,23 @@
 <template>
-    <div v-if="loaded">
+    <div>
+        <div id="temp-message">
+            Some Kind of Show<br>
+            Sunday, March 22nd @ 12PM PST<br>
+            presented by Resource Residency and Calexo
+        </div>
+        <div id="temp-logos">
+            <img src="/assets/images/calexo_logo.png" alt="" style="transform:translateY(-100%)" onclick="window.location.href='https://calexo.co'">
+            <img src="/assets/images/s1_logo.png" alt="" style="width:20%" onclick="window.location.href='https://https://s1portland.com/'">
+        </div>
+    </div>
+    <!-- <div v-if="loaded">
         <Navigation />
         <Artists v-if="route === 'artists'" />
         <Artist v-if="route === 'artist'" />
         <Residencies v-if="route === 'residencies'" />
         <Residency v-if="route === 'residency'" />
         <About v-if="route === 'about'" />
-    </div>
+    </div> -->
 </template>
 
 <script>
