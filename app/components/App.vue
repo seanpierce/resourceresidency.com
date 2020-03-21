@@ -1,10 +1,7 @@
 <template>
     <div>
-        <div id="temp-message">
-            Some Kind of Show<br>
-            Sunday, March 22nd @ 12PM PST<br>
-            presented by Resource Residency and Calexo
-        </div>
+        <div id="twitch-stream"></div>
+        <img src="/assets/images/somekindofshow.jpg" alt="" style="width:100%">
         <div id="temp-logos">
             <img src="/assets/images/calexo_logo.png" alt="" style="transform:translateY(-100%)" onclick="window.location.href='https://calexo.co'">
             <img src="/assets/images/s1_logo.png" alt="" style="width:20%" onclick="window.location.href='https://https://s1portland.com/'">
@@ -46,5 +43,17 @@ export default {
             return this.$root.loaded;
         }
     },
+    mounted() {
+        new Twitch.Embed("twitch-stream", {
+            width: '100%',
+            height: 500,
+            channel: "resourceresidency",
+            layout: "video",
+            autoplay: false,
+            setFullscreen: true
+            // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+            // parent: ["embed.example.com", "othersite.example.com"]
+        });
+    }
 }
 </script>
