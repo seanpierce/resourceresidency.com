@@ -10,7 +10,7 @@ __pycache__/
 
 # ignore FE packages and compiled files
 app/node_modules
-#assets/dist/
+assets/dist/
 
 # ignore virtualenv
 venv/
