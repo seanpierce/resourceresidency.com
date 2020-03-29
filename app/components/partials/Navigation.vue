@@ -1,18 +1,12 @@
 <template>
-    <div>
-        <h1>Resource Residency</h1>
+    <div id="navigation">
+        <h1><a href="/">resource residency</a></h1>
         <ul>
             <li>
-                <a href="/artists">Artists</a>
+                <a href="/about">about/</a>
             </li>
             <li>
-                <a href="/residencies">Residencies</a>
-            </li>
-            <li>
-                <a href="/projects">Projects</a>
-            </li>
-            <li>
-                <a href="/about">About</a>
+                <a href="/events">events/</a>
             </li>
         </ul>
     </div>

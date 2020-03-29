@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'artists',
     'content',
     'ckeditor',
+    'api',
 ]
 
 MIDDLEWARE = [
