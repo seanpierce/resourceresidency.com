@@ -8,3 +8,15 @@ def index(request):
         'page': 'home',
         'title': 'Home'
     })
+
+def events(request):
+    return render(request, 'app.html', {
+        'page': 'events',
+        'title': 'Events'
+    })
+
+def about(request):
+    return render(request, 'app.html', {
+        'page': 'about',
+        'title': 'About'
+    })
