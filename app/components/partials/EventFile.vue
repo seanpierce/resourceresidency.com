@@ -6,6 +6,9 @@
         <div v-if="type === 'image'">
             <img :src="'media/' + file" />
         </div>
+        <div v-if="type === 'audio'">
+            <audio controls :src="'media/' + file" />
+        </div>
     </div>
 </template>
 
@@ -25,6 +28,9 @@ export default {
             if (this.isVideo(this.extension))
                 return 'video';
 
+            if (this.isAudio(this.extension))
+                return 'audio';
+
             return null;
         }
     },
@@ -40,6 +46,10 @@ export default {
         isVideo(extension) {
             var videoTypes = ['mov', 'mp4']
             return videoTypes.indexOf(extension) > -1;
+        },
+        isAudio(extension) {
+            var audioTypes = ['mp3', 'aiff', 'wav'];
+            return audioTypes.indexOf(extension) > -1;
         }
     },
     mounted() {

@@ -1,16 +1,27 @@
 #events {
     h2 {
-        border-bottom: solid 1px #333;
+        background: #222;
+        color: white;
+        padding: 6px;
     }
     .event {
+        border-bottom: solid 1px #222;
+        &.last {
+            border: none;
+        }
         h3 {
             margin-bottom: 6px;
+            font-weight: bold;
         }
         h4 {
             margin-top: 6px;
         }
-        img, video {
+        img, video, audio {
             width: 100%;
+        }
+        audio {
+            border: solid 1px lightgray;
+            background: #f3f3f3;
         }
     }
 }

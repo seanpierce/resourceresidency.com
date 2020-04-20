@@ -2,14 +2,14 @@
     <div id="events">
         <div v-if="upcomingEvents && upcomingEvents.length > 0">
             <h2>Upcoming</h2>
-            <div v-for="event in upcomingEvents" :key="event.id">
-                <Event :event="event" />
+            <div v-for="(event, index) in upcomingEvents" :key="index">
+                <Event :event="event" :last="index + 1 === upcomingEvents.length" />
             </div>
         </div>
         <div v-if="pastEvents && pastEvents.length > 0">
             <h2>Past</h2>
-            <div v-for="event in pastEvents" :key="event.id">
-                <Event :event="event" />
+            <div v-for="(event, index) in pastEvents" :key="index">
+                <Event :event="event" :last="index + 1 === pastEvents.length" />
             </div>
         </div>
     </div>

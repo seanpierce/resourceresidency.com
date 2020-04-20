@@ -1,5 +1,5 @@
 <template>
-    <div class="event">
+    <div class="event" v-bind:class="{ last: last }">
         <h3>{{ event.name }}</h3>
         <h4>{{ event.date }}</h4>
         <div v-if="event.files">
@@ -12,12 +12,15 @@
 </template>
 
 <script>
-import EventFile from '../partials/EventFile.vue';
+import EventFile from './EventFile.vue';
 
 export default {
     components: {
         EventFile
     },
-    props: ['event']
+    props: [
+        'event',
+        'last'
+    ]
 }
 </script>
